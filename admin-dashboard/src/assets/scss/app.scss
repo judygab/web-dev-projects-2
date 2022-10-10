@@ -1,0 +1,49 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "variables";
+
+body {
+  background-color: $body-bg;
+}
+
+
+/* Dashboard */
+.credit-card-container {
+  background: rgb(50,88,242);
+  background: linear-gradient(90deg, rgba(50,88,242,1) 0%, rgba(70,123,245,1) 47%, rgba(105,164,248,1) 100%);
+
+  p {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.mini-stats-wid{
+    .mini-stat-icon{
+        overflow: hidden;
+        position: relative;
+        &:before, &:after{
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 54px;
+            background-color: rgba($white,.1);
+            left: 16px;
+            transform: rotate(32deg);
+            top: -5px;
+            transition: all 0.4s;
+        }
+
+        &::after{
+            left: -12px;
+            width: 12px;
+            transition: all 0.2s;
+        }
+    }
+
+    &:hover{
+        .mini-stat-icon{
+            &::after{
+                left: 60px;
+            }
+        }
+    }
+}
