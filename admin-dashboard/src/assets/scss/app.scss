@@ -1,4 +1,3 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
 @import "variables";
 
 body {
@@ -46,4 +45,59 @@ body {
             }
         }
     }
+}
+
+.icon-container {
+  align-items: center;
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  font-weight: 500;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.icon-sm {
+  height: 3rem;
+  width: 3rem;
+}
+
+.ad-container {
+  background-image: url(../images/1876.jpg);
+  background-size: cover;
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  .image-cover {
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: linear-gradient(to top left, #141727, #3a416f);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.verti-timeline {
+  border-left: 2px solid #f6f6f6;
+  margin: 0 10px;
+
+  .event-list {
+    position: relative;
+    padding: 0px 0px 40px 30px;
+
+    .event-timeline-icon {
+      position: absolute;
+      left: -9px;
+      top: 0px;
+      z-index: 9;
+      font-size: 16px;
+      padding: 1px;
+      background-color: $white;
+    }
+  }
 }

@@ -1,5 +1,31 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
 // Body Styling
 $body-bg:                   #f8f8fb;
 
 // Color System:
 $white:    #fff;
+$blue: #3258F2;
+$orange: #F2545B;
+$red: #A93F55;
+
+$colors: (
+ "blue": $blue,
+ "orange": $orange,
+ "red": $red
+);
+
+// Variants
+$primary: $blue;
+$secondary: $orange;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+@import "./node_modules/bootstrap/scss/bootstrap";
