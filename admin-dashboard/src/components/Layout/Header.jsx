@@ -18,6 +18,7 @@ const Header = () => {
             </button>
           </div>
           <div className="header-navigation">
+            <FontAwesomeIcon icon="fa-solid fa-sun-bright" />
             <FontAwesomeIcon icon="fa-solid fa-user" className="p-1"/>
             <FontAwesomeIcon icon="fa-solid fa-gear" className="p-1"/>
           </div>

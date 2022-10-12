@@ -3,9 +3,9 @@ import SideBar from "./SideBar";
 
 const SideBarContainer = props => {
   return (
-    <div className="vertical-menu">
-      <div className="navbar-brand-box">
-        <Link to="/" className="logo">
+    <div className="menu">
+      <div className="navbar-brand-box my-3">
+        <Link to="/" className="logo mx-4 px-4">
           WEBDECODED
         </Link>
       </div>

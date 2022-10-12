@@ -8,22 +8,32 @@ $body-bg:                   #f8f8fb;
 // Color System:
 $white:    #fff;
 $blue: #3258F2;
+$lightBlue: #A0EADE;
+$cambridgeBlue: #BFD2BF;
 $orange: #F2545B;
 $red: #A93F55;
+$purple: #a855f7;
+$green: #646F4B;
 
 $colors: (
  "blue": $blue,
  "orange": $orange,
- "red": $red
+ "red": $red,
+ "purple": $purple,
+ "lightBlue": $lightBlue,
+ "cambridgeBlue": $cambridgeBlue,
+ "green": $green
 );
 
 // Variants
-$primary: $blue;
-$secondary: $orange;
+$primary: $purple;
+$secondary: $lightBlue;
+$success: $green;
 
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
+  "success": $success
 );
 
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
