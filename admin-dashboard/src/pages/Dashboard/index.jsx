@@ -30,7 +30,6 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="page-content">
         <Container fluid>
           <Breadcrumbs
             title="Admin"
@@ -89,7 +88,6 @@ const Dashboard = () => {
             </Col>
           </Row>
         </Container>
-      </div>
     </>
   )
 }

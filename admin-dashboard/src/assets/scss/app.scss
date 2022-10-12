@@ -4,6 +4,11 @@ body {
   background-color: $body-bg;
 }
 
+a {
+  text-decoration: none;
+  color: $black;
+}
+
 
 /* Dashboard */
 .credit-card-container {
@@ -99,5 +104,88 @@ body {
       padding: 1px;
       background-color: $white;
     }
+  }
+}
+
+/* Layout */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 calc(24px * 0.5) 0 0;
+}
+
+#page-topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 250px;
+  z-index: 1002;
+  background-color: $white;
+  box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+}
+
+.page-content {
+  padding: calc(70px + 24px) calc(24px * 0.75) 60px calc(24px * 0.75);
+}
+
+.menu-item {
+   border-radius: 0.5rem;
+  .menu-pill {
+    padding: 0.625rem;
+    text-align: center;
+    background-color: $white;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    position: relative;
+    z-index: 100;
+  }
+
+  &.active {
+    background-color: $white;
+  }
+}
+
+.menu-title {
+  padding: 0.625rem;
+}
+
+.footer {
+    bottom: 0;
+    padding: 20px calc(24px * 0.75);
+    // position: absolute;
+    right: 0;
+    color: #74788d;
+    left: 250px;
+    height: 60px;
+}
+
+.main-content {
+  margin-left: 250px;
+
+  &.collapsed {
+    margin-left: 70px;
+  }
+}
+
+#sidebar-menu {
+  width: 250px;
+  bottom: 0;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  padding-top: 70px;
+  box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+
+  &.collapsed {
+    width: 70px;
   }
 }
