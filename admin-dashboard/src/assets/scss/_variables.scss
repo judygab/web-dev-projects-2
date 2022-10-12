@@ -4,6 +4,9 @@
 
 // Body Styling
 $body-bg:                   #f8f8fb;
+$body-color: #000000;
+$header-color: #fff;
+$container-bg: #fff;
 
 // Color System:
 $white:    #fff;
@@ -37,5 +40,44 @@ $theme-colors: (
 );
 
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+.dark {
+    $secondary: #111111;
+    $success: #222222;
+    $dark: #000;
+
+    $theme-colors: (
+        "secondary": $secondary,
+        "success": $success,
+        "danger": $danger,
+        "info": $indigo,
+        "dark": $dark,
+        "light": $light,
+    );
+
+    /* redefine theme color variables */
+    @each $color, $value in $theme-colors {
+        --#{$variable-prefix}#{$color}: #{$value};
+    }
+
+    /* redefine theme color rgb vars (used for bg- colors) */
+    $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+    @each $color, $value in $theme-colors-rgb {
+        --#{$variable-prefix}#{$color}-rgb: #{$value};
+    }
+
+    $body-color: #ffff;
+    $card-bg: #111C44;
+    $body-bg: #0f172a;
+    $container-bg: #111C44;
+    $link-color: $white;
+
+    --#{$variable-prefix}body-color: #{$body-color};
+    --#{$variable-prefix}body-bg: #{$body-bg};
+    --#{$variable-prefix}link-color: #{$link-color};
+    --#{$variable-prefix}container-bg: #{$container-bg};
+
+    @import "./node_modules/bootstrap/scss/bootstrap";
+}
 
 @import "./node_modules/bootstrap/scss/bootstrap";

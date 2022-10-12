@@ -1,7 +1,7 @@
 @import "variables";
 
 body {
-  background-color: $body-bg;
+  background-color: var(--bs-body-bg);
 }
 
 a {
@@ -29,7 +29,7 @@ a {
             position: absolute;
             width: 8px;
             height: 54px;
-            background-color: rgba($white,.1);
+            background-color: rgba($container-bg,.1);
             left: 16px;
             transform: rotate(32deg);
             top: -5px;
@@ -55,7 +55,7 @@ a {
 .icon-container {
   align-items: center;
   background-color: $primary;
-  color: $white;
+  color: $container-bg;
   display: flex;
   font-weight: 500;
   height: 100%;
@@ -102,7 +102,7 @@ a {
       z-index: 9;
       font-size: 16px;
       padding: 1px;
-      background-color: $white;
+      background-color: $card-bg;
     }
   }
 }
@@ -123,7 +123,7 @@ a {
   right: 0;
   left: 250px;
   z-index: 1002;
-  background-color: $white;
+  background-color: var(--bs-container-bg);
   box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
 }
 
@@ -136,7 +136,7 @@ a {
   .menu-pill {
     padding: 0.625rem;
     text-align: center;
-    background-color: $white;
+    background-color: $card-color;
     border-radius: 0.5rem;
     justify-content: center;
     align-items: center;
@@ -150,7 +150,7 @@ a {
   }
 
   &.active {
-    background-color: $white;
+    background-color: $body-color;
   }
 }
 
@@ -183,6 +183,7 @@ a {
   position: fixed;
   top: 0;
   padding-top: 70px;
+  background-color: var(--bs-container-bg);
   box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
 
   &.collapsed {
