@@ -1,9 +1,37 @@
 import { Card } from "reactstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ReactApexChart from "react-apexcharts";
 
 const MetricsComp = () => {
+  const series = [50, 34, 67, 95];
+
+  const options = {
+  plotOptions: {
+    radialBar: {
+      dataLabels: {
+        name: {
+          fontSize: "22px",
+        },
+        value: {
+          fontSize: "16px",
+        },
+        total: {
+          show: true,
+          label: "Total",
+          formatter: function (w) {
+            return 340;
+          },
+        },
+      },
+    },
+  },
+
+  labels: ["Computer", "Tablet", "Laptop", "Mobile"],
+  colors: ["primary", "secondar", "orange"],
+};
+
   return (
-    <Card className="my-2">
+    <Card>
       <div className="text-center">
         <h5>Views</h5>
         <div className="d-flex justify-content-center">
@@ -14,22 +42,13 @@ const MetricsComp = () => {
           </div>
         </div>
         <span className="block text-secondary">Compared to last week</span>
-        <table className="mt-6 w-100">
-          <tbody>
-            <tr>
-              <td>Clicks</td>
-              <td className="text-secondary">12,000</td>
-            </tr>
-            <tr>
-              <td>Likes</td>
-              <td className="text-secondary">4,032</td>
-            </tr>
-            <tr>
-              <td>Other</td>
-              <td className="text-secondary">1,200</td>
-            </tr>
-          </tbody>
-        </table>
+        <ReactApexChart
+          options={options}
+          series={series}
+          type="radialBar"
+          height="230"
+          className="apex-charts"
+        />
       </div>
     </Card>
   )

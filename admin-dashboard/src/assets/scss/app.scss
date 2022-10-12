@@ -13,7 +13,7 @@ a {
 /* Dashboard */
 .credit-card-container {
   background: rgb(50,88,242);
-  background: linear-gradient(90deg, rgba(50,88,242,1) 0%, rgba(70,123,245,1) 47%, rgba(105,164,248,1) 100%);
+  background: linear-gradient(90deg, #84D9FE, #A797FF);
 
   p {
     margin-bottom: 0.25rem;
@@ -195,4 +195,10 @@ a {
   thead {
     color: rgb(131 146 171);
   }
+}
+
+.card {
+  margin-bottom: 24px;
+  box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+  border: none;
 }

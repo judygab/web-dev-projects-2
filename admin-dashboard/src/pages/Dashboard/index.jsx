@@ -70,9 +70,11 @@ const Dashboard = () => {
                 ))}
               </Row>
               <Row>
-                <Card>
-                  <ColumnChart periodData={periodData} dataColors={["#3258F2", "#F2545B", "#A93F55"]}/>
-                </Card>
+                <Col xs="12">
+                  <Card>
+                    <ColumnChart periodData={periodData} dataColors={["#3258F2", "#F2545B", "#A93F55"]}/>
+                  </Card>
+                </Col>
               </Row>
             </Col>
           </Row>
