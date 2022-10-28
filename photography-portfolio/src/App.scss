@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.hero-section-container {
+  background-color: #161412;
+  height: 300px;
+
+  .img-wrapper {
+    height: 100%;
+    background-image: url('../src/assets/images/statue-1.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  p, a, h1 {
+    color: var(--bs-gray-100);
+  }
+}
+
+.btns-wrapper {
+  display: flex;
+  gap: 1em;
+}
+
+p, a {
+  color: var(--bs-gray-400);
+}
