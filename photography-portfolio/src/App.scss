@@ -28,3 +28,74 @@ p, a, h1 {
   color: var(--bs-gray-400);
   font-family: 'Forum';
 }
+
+
+.menu-btn {
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: black;
+  border: none;
+  background-color: white;
+  margin: 20px;
+
+  .menu-icon-container {
+    position: absolute;
+    width: 10px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+    span {
+      background-color: #161412;
+      position: absolute;
+      height: 2px;
+      transition-duration: 300ms;
+      transition-property: transform;
+      transition-timing-function: ease-in-out;
+    }
+
+    .icon-line {
+      width: 20px;
+    }
+
+    .icon-line:first-child {
+      top: 0px;
+      transform: translateY(-0.375rem);
+    }
+
+    .icon-line:nth-child(2) {
+      top: 3px;
+      transition-property: all;
+      transition-duration: 300ms;
+      transition-delay: 200ms;
+      opacity: 1;
+    }
+
+    .icon-line:last-child {
+      top: 6px;
+      transform: translateY(0.375rem);
+    }
+  }
+
+  &.expanded {
+    .icon-line:nth-child(2) {
+      width: 0;
+      opacity: 0.5;
+    }
+
+    .icon-line:first-child {
+      transform: rotate(135deg);
+      transition-delay: 200ms;
+    }
+
+    .icon-line:last-child {
+      transform: rotate(-135deg);
+      transition-delay: 200ms;
+    }
+  }
+}
