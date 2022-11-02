@@ -4,9 +4,6 @@ import { ReactComponent as RightArrowIcon } from "../assets/icons/right-arrow-sv
 const NewsletterSection = () => {
   return (
     <div className="newsletter-section-container d-flex flex-column">
-      <div className="">
-        <img src="/images/camera_hand.png" alt="hand holding camera"></img>
-      </div>
       <h1>
         <span>Curiosity,</span>
         <br></br>
