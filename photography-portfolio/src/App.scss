@@ -129,6 +129,7 @@ p, a, h1 {
   display: none;
 
   &.expanded {
+    display: block;
     opacity: 1;
     transform: translateX(0);
   }
@@ -184,6 +185,60 @@ p, a, h1 {
       min-width: 100%;
       transform: translate(-50%, -50%);
       
+    }
+  }
+}
+
+.contact-btn {
+  .btn-primary {
+    border-radius: 0px;
+    padding: 1rem 1.3rem;
+  }
+}
+
+.header {
+  margin-bottom: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.logo {
+  font-family: 'Forum';
+  font-size: 34px;
+}
+
+.about-section-wrapper {
+  margin: 10px 0;
+  .about-img-wrapper {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.newsletter-section-container {
+  margin: 50px 0;
+
+  h1, span {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  img {
+    width: 200px;
+  }
+
+  .email-input {
+    width: 400px;
+    margin: 1.25rem 0;
+    border-bottom: 2px solid #161412;
+
+    input {
+      width: 100%;
+      border: none;
     }
   }
 }

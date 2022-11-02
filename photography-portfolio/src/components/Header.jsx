@@ -1,8 +1,9 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 
 export const Header = ({ navbarOpen, setNavbarOpen }) => {
   return (
-    <div>
+    <div className="d-flex header justify-content-between align-items-center">
       <button
         className={navbarOpen ? "menu-btn expanded" : "menu-btn"}
         onClick={() => setNavbarOpen((prevNavbarOpen) => !prevNavbarOpen)}
@@ -13,6 +14,10 @@ export const Header = ({ navbarOpen, setNavbarOpen }) => {
           <span className="icon-line"></span>
         </div>
       </button>
+      <div className="logo">Photography Today</div>
+      <div className="contact-btn">
+        <Button variant="primary">Get a Quote</Button>
+      </div>
     </div>
   );
 };

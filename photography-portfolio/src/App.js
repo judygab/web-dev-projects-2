@@ -6,6 +6,8 @@ import { HeroSection } from "../src/components/HeroSection";
 import { Header } from './components/Header';
 import MenuOverlay from './components/MenuOverlay';
 import ImagesCollection from './components/ImagesCollection';
+import AboutSection from './components/AboutSection';
+import NewsletterSection from './components/NewsletterSection';
 
 function App() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -17,6 +19,8 @@ function App() {
         <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
         <HeroSection />
         <ImagesCollection />
+        <AboutSection />
+        <NewsletterSection />
       </Container>
     </div>
   );
