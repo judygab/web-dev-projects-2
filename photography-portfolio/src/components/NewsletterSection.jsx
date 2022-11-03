@@ -9,7 +9,7 @@ const NewsletterSection = () => {
         <br></br>
         piqued.
       </h1>
-      <div className="email-input">
+      <div className="email-input d-flex">
         <input type="email" placeholder="Your Email"></input>
         <RightArrowIcon height={20} />
       </div>

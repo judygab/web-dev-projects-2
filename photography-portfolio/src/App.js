@@ -9,6 +9,7 @@ import ImagesCollection from './components/ImagesCollection';
 import AboutSection from './components/AboutSection';
 import NewsletterSection from './components/NewsletterSection';
 import FooterMenu from './components/FooterMenu';
+import InformationSection from './components/InformationSection';
 
 function App() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -19,6 +20,7 @@ function App() {
         <Header navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
         <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
         <HeroSection />
+        <InformationSection />
         <ImagesCollection />
         <AboutSection />
         <Container className='footer-section'>
