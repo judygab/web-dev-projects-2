@@ -53,3 +53,11 @@
 #popup-root .popup-content {
   padding: 50px;
 }
+
+#popup-root .popup-content input {
+  color: black;
+}
+
+#popup-root .popup-content .success-msg {
+  color: rgb(53, 172, 53);
+}

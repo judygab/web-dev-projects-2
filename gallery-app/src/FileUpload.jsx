@@ -10,6 +10,7 @@ const FileUpload = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [uploaded, setUploaded] = useState(false);
 
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
@@ -18,6 +19,12 @@ const FileUpload = () => {
   useEffect(() => {
     loadAllImages();
   }, []);
+
+  useEffect(() => {
+    if (!open) {
+      setUploaded(false);
+    }
+  }, [open]);
 
   const loadAllImages = async () => {
     setLoading(true);
@@ -43,6 +50,8 @@ const FileUpload = () => {
 
     const uploadTask = uploadBytesResumable(storageRef, file);
 
+    setUploaded(false);
+
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -55,12 +64,12 @@ const FileUpload = () => {
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          console.log("download url:", downloadURL);
           const imageStoreRef = doc(db, "images", file.name);
           setDoc(imageStoreRef, {
             imageUrl: downloadURL,
           });
         });
+        setUploaded(true);
       }
     );
   };
@@ -80,6 +89,9 @@ const FileUpload = () => {
       <Popup open={open} onClose={closeModal}>
         <input type="file" accept="/image/*" onChange={handleChange}></input>
         <button onClick={handleUpload}>Save</button>
+        {uploaded && (
+          <p className="success-msg">Image was uploaded successfully</p>
+        )}
       </Popup>
     </div>
   );
